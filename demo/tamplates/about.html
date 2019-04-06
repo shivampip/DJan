@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1>About us</h1>
+
+<p>This is my first Django project</p>
+<p>I kind of like working with it</p>
+<h3><i>Its Cool</i></h3>
+
+<p>
+    {{ name }}, {{ city }}
+</p>
+
+
+<ul>
+    {% for place in places %}
+        <li> {{ forloop.counter }} . {{ place }} </li>
+    {% endfor %}
+</ul>
+
+{% if age > 17 %}
+<b> You can Vote </b>
+{% elif age < 5 %}
+<b> You should not play mobile, you are small </b>
+{% else %}
+<b> You con't Vote </b>
+{% endif %}
+
+
+{{ headd|safe }}
+
+{{ age|add:5 }}
+
+{% endblock %}

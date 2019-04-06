@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> In App Tamplate </h1>
+<h2>{{ object.title }}</h2>
+
+{% if object.description %} {{ object.description }} {% else %} No description {% endif %}
+
+{% endblock %}
